@@ -176,3 +176,19 @@ body {
 .row-label-desc{
     min-height: 48px;
 }
+
+.header-row {
+    background: cornflowerblue;
+}
+
+.data-row:nth-child(odd) {
+    background-color: #aaaaaa;
+}
+
+.data-row:nth-child(even) {
+    background-color: papayawhip;
+}
+
+.font-black {
+    color: #111111;
+}

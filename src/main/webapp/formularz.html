@@ -15,7 +15,8 @@
             <nav class="nav nav-masthead justify-content-center">
                 <a class="nav-link" href="index.html">Strona główna</a>
                 <a class="nav-link" href="classes.html">Lista zajęć</a>
-                <a class="nav-link" href="formularz.html">Formularz</a>
+                <a class="nav-link" href="contactForms.html">wypełnione formularze</a>
+
             </nav>
         </div>
     </header>
@@ -25,7 +26,8 @@
             <div class="row col-md-12">
                 <h2>Formularz:</h2>
             </div>
-            <form class="row col-md-12">
+<!--            w from dopisujemy contact-form-->
+            <form class="row col-md-12" id="contact-form">
                 <div class="row col-md-12 ">
                     <div class="col-6">
                         <label for="name">
@@ -106,6 +108,65 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+<!--to już jest nasze! pobranie wartości z formularza, obsługa  przycisku SUBMIT-->
+
+<script type="text/javascript">
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    document.getElementById('contact-form').onsubmit = (function (e) { //obiekt event
+        e.preventDefault(); // zapobiegaj domyślnemy działaniu (przeładowaywaniu srony)
+        console.log('Klik'); //system.out.print dla przeglądarki
+
+    //   to jest document.getElementById('sedcription')
+        var description = $('description').value;
+        var age = $('#age').val();
+        var name = $('#name').val();
+        var lastName = $('#lastname').val();
+        var email = $('#email').val();
+
+        console.log(email);
+        console.log(description);
+
+    //    stwórz obiekt
+        var contactForm={};
+        contactForm.description=description;
+        contactForm.name=name;
+        contactForm.lastName= lastName;
+        contactForm.email=email;
+        contactForm.age=age;
+
+        var cookieContent = getCookie('contactForms');
+        var array = [];
+        if(cookieContent !== ""){
+            array=JSON.parse(cookieContent);
+        }
+        array.push(contactForm);
+        setCookie('contactForms', JSON.stringify(array), 1);
+    });
+</script>
 </body>
 </html>
 

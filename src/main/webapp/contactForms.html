@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead">
+        <div class="inner">
+            <h3 class="masthead-brand">JavaGDA26</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="index.html">Strona główna</a>
+                <a class="nav-link" href="classes.html">Lista zajęć</a>
+                <a class="nav-link" href="formularz.html">Formularz</a>
+                <a class="nav-link" href="contactForms.html">Wypelnione formularze</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" id="main-table" class="row inner cover font-black">
+        <div class="row col-12 header-row">
+            <div class="col-2">Imie</div>
+            <div class="col-2">Nazwisko</div>
+            <div class="col-2">Wiek</div>
+            <div class="col-2">Email</div>
+            <div class="col-2">Opis</div>
+        </div>
+        <div class="row col-12 data-row">
+            <div class="col-2">Przyklad</div>
+            <div class="col-2">Przyklad</div>
+            <div class="col-2">Przyklad</div>
+            <div class="col-2">Przyklad</div>
+            <div class="col-2">Przyklad</div>
+        </div>
+    </main>
+
+    <footer class="mastfoot">
+        <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
+                    href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+    </footer>
+</div>
+<!-- Skrypty powinny znaleźć się na końcu pliku -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // załaduj funkcję po załadowaniu całej strony
+    $(document).ready(function () {
+        // wyciągamy JEDEN obiekt z cookie
+        var content = getCookie('contactForms');
+        if (content !== "") {
+            var array = JSON.parse(getCookie('contactForms'));
+
+            array.forEach(function (form1) {
+
+                var divElement = "<div class=\"row col-12 data-row\">" +
+                    "<div class=\"col-2\">" + form1.name + "</div>" +
+                    "<div class=\"col-2\">" + form1.lastname + "</div>" +
+                    "<div class=\"col-2\">" + form1.age + "</div>" +
+                    "<div class=\"col-2\">" + form1.email + "</div>" +
+                    "<div class=\"col-2\">" + form1.description + "</div>" +
+                    "</div>";
+
+                $('#main-table').append(divElement);
+            });
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+<!--Bind address -->
