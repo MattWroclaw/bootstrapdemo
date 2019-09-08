@@ -192,3 +192,8 @@ body {
 .font-black {
     color: #111111;
 }
+
+.ogloszenie {
+    font-size: larger;
+    background: darkorange;
+}
