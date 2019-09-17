@@ -1,0 +1,454 @@
+/*
+Theme Name: Antoni
+Theme URI: http://stermedia.pl
+Description:
+Author: stermedia.pl
+Author URI: stermedia.pl
+Tags:
+Version: 1.0
+.
+Released under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>.
+.
+-----------------------------------------------
+----------------------------------------------- */
+
+* {margin:0px; padding:0px;}
+body {
+    margin:0;
+    padding:0;
+    border:0;
+    width:100%;
+    background: url(images/body-bg.jpg) center top;
+    min-width:600px;
+    font-size:75%;
+    color:#240f02;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+table {border-collapse:collapse; border:1px solid #7d5217; font-size:12px; color:#240f02; font-family: Verdana, Arial, Helvetica, sans-serif;}
+th {padding:2px 3px; background-color:#7D5217; color:#EFE6C7}
+td {padding:2px 3px; border:1px solid #7D5217;}
+tr.even td {background-color:#DEBA66;}
+pre {overflow:auto; padding:4px; max-height:500px;}
+fieldset {padding:10px;}
+img {border: none;}
+blockquote {padding: 5px 20px; text-align: left; color:#602600}
+blockquote blockquote {padding: 2px 10px; text-align: left; color:#602600; font-style:italic;}
+a {text-decoration:none; color:#c97e00; border: 0px;}
+a:hover {text-decoration:underline; border: 0px;}
+a.u {text-decoration:underline; border: 0px;}
+a.u:hover {text-decoration:none; border: 0px;}
+a.n, a.n:hover {text-decoration:none; border: 0px;}
+a:focus, a:active {outline: none;}
+
+p {padding:7px 0;  line-height: 130%;}
+.border {border:1px solid red;}
+h1, h2, h3, h4 { font-family: "Trebuchet MS";}
+hr {border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height: 1px;}
+
+input {font-family: 'Verdana'; color: #240f02; font-size: 11px; border:1px solid #7d5217; padding: 2px 3px;}
+input.button {}
+textarea {font-family: 'Verdana'; color: #240f02; font-size: 11px; border:1px solid #7d5217; padding: 2px 3px;}
+select {font-family: 'Verdana'; color: #240f02; font-size: 12px; border:1px solid #7d5217;}
+
+/* Header styles */
+#header-wrapper {
+    width:100%;
+    height:250px;
+    background:url(images/top-right-bg-repeat.jpg) repeat-x top;
+}
+#header {
+    width:627px;
+    height:250px;
+    padding:0;
+    margin:0 auto;
+    background:url(images/header-bg.jpg) no-repeat;
+}
+#header p,
+#header h1,
+#header h2 {
+    padding:.4em 15px 0 15px;
+    margin:0;
+}
+#access {
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0 6px 6px;
+    width: 100%;
+}
+#access ul {
+    position:relative;
+    left:10px;
+    top:120px;
+    font-size: 15px;
+    list-style: none;
+    margin: 0 0 0 -0.8125em;
+    padding-left: 0;
+}
+#access li {
+    float: left;
+    position: relative;
+}
+#access a {
+    color: #79281c;
+    display: block;
+    line-height: 22px;
+    padding: 0 13px;
+    text-decoration:none;
+}
+#access ul ul {
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    display: none;
+    float: left;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 188px;
+    z-index: 99999;
+}
+#access ul ul ul {
+    left: 100%;
+    top: 0;
+}
+#access ul ul a {
+    /*background: #f9f9f9;*/
+    background: url("images/body-bg.jpg") repeat scroll center top #97712c;
+    border-bottom: 1px dotted #ddd;
+    color: #444;
+    font-size: 13px;
+    font-weight: normal;
+    height: auto;
+    width: 168px;
+    line-height: 22px;
+    padding: 0 13px;
+    text-decoration:none;
+}
+#access li:hover > a,
+#access ul ul :hover > a,
+#access a:focus {
+    /*background: #efefef;*/
+    background: url("images/body-bg.jpg") repeat scroll center top #97712c;
+    color:#79281c;
+}
+#access li:hover > a,
+#access a:focus {
+    background: url("images/body-bg.jpg") repeat scroll center top #97712c;
+    color: #373737;
+}
+#access ul li:hover > ul {
+    display: block;
+}
+#access .current_page_item > a,
+#access .current_page_ancestor > a {
+    font-weight: bold;
+}
+
+
+.logo {position:relative;top:80px;}
+.logo h1 {font: bold 26px/120% Georgia; color:#602600; padding:0 0 10px 20px; margin-right:16px;}
+.logo .description { font: bold italic 18px/120% Georgia; color:#602600;margin-left:340px;}
+.logo h1 a, .logo h1 a:hover {color:#602600; text-decoration:none;}
+.logo a b {}
+.welcome-message {
+    position:relative;
+    background: url(images/begin.gif) no-repeat;
+    top:150px;
+    left:10px;
+}
+.welcome-message h1 {
+    font-size:190%;
+}
+.searchbox {
+    position: relative;
+    left: 640px;
+    width: 176px;
+    font-size: 11px;
+    color: #97712C;
+}
+#searchform .label {display:block; padding:0px 0px 2px 5px;}
+.search {width:135px; height:20px; background: url(images/search-input.gif) left top no-repeat; float:left;}
+#searchform input {border:none; background:transparent url(images/go-button.gif) left top no-repeat; font-weight: bold; color:#ceb978; width:30px; height:20px; float:right;}
+#searchform .search #s {border:none; background:transparent; color:#ceb978; width:125px; height:auto !important; margin:3px 0 0 4px; float:left;}
+
+/* 'widths' sub menu */
+#layoutdims {
+    clear:both;
+    background:#eee;
+    border-top:4px solid #000;
+    margin:0;
+    padding:6px 15px !important;
+    text-align:right;
+}
+/* column container */
+.colmask {
+    position:relative;	/* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    margin: 0 auto;
+    width:990px;			/* width of whole page */
+    overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;			/* width of page */
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead
+					only padding top and bottom is included here, make it whatever value you need */
+    overflow:hidden;
+}
+/* 3 Column settings */
+.threecol {
+}
+.threecol .colmid {
+    right:175px;			/* width of the right column */
+}
+.threecol .colleft {
+    right:627px;			/* width of the middle column */
+}
+.threecol .col1 {
+    width:627px;			/* width of center column content (column width minus padding on either side) */
+    left:984px;			/* 100% plus left padding of center column */
+}
+.threecol .col2 {
+    width:175px;			/* Width of left column content (column width minus padding on either side) */
+    left:175px;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .col3 {
+    width:175px;			/* Width of right column content (column width minus padding on either side) */
+    left:816px;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+
+#main {position:relative; float:left; width:627px;}
+.content {position:relative; width:627px; background: url(images/content-bg.jpg);}
+.cont-r {position:relative; background: url(images/border.gif) right top repeat-y;}
+.cont-l {position:relative; background: url(images/border.gif) left top repeat-y;}
+.cont-bot {position:relative; background: url(images/content-bottom-bg.jpg) left bottom no-repeat; top:0px; bottom:0px; min-height:380px;overflow:hidden;padding:20px;}
+.grad-hack {position:relative; background: url(images/header-bg.jpg) 0px -170px no-repeat; width:627px; overflow:hidden; margin-top:-80px; padding-bottom:20px}
+.begin {background: url(images/begin.gif) 10px 0px no-repeat; position:absolute; top:0px; left:0px; width:100%; height:40px; z-index:10;}
+
+.content h1 {font: 20px "Trebuchet MS"; color:#602600; letter-spacing:-1px; padding-top:10px;}
+.content h2 {font:bold 18px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 0px;}
+.content h3 {font:bold 16px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 0px;}
+.content h4 {font:bold 14px "Trebuchet MS"; color:#602600; padding:7px 0px 2px 0px;}
+.content h5 {font:bold 12px "Trebuchet MS"; color:#602600; padding:5px 0px 2px 0px;}
+.content h6 {font:bold 10px Verdana; color:#602600; padding:5px 0px 2px 0px;}
+.content h2.pagetitle {position:absolute; top:0px; right:30px; padding:0px; font-size:12px;}
+.post {padding:24px 10px 10px 10px; background: url(images/post-devider.jpg) no-repeat;}
+.post1 {padding:0px 10px 10px 10px;position:relative; z-index:100;}
+.post0 {padding: 22px 18px 10px;}
+* html .post {position:relative;}
+* html .post1 {position:relative; height:350px;}
+.content .title {padding:0px;}
+.content .date {font:normal 24px/47px Georgia; margin-right:10px; color:#ffffff; float:left; width:59px; height:56px; overflow:hidden; text-align:center; background: url(./images/TAU.gif) no-repeat;}
+.content .date .month {font: 14px/16px Arial; color:#4c2604; margin:-10px 0px 0 0; text-transform:lowercase;}
+.content h1 a, .content h1 a:hover {color:#602600; text-decoration:none;}
+.content p.author {color:#240f02; padding:0px 0px 0px 0px; font-size:11px; overflow:hidden;}
+.entry {position:relative; padding:0 0 10px 0; clear:both;}
+.entry img.left, .entry img[align="left"], .entry img.right, .entry img[align="right"] {border:1px solid #99ba09; margin:0px 5px 5px 5px; max-width:603px}
+.entry img { margin:0px 5px 0px 5px; max-width:603px}
+.entry img.wp-smiley {border:none; margin:0px 2px 0px 2px; max-width:603px}
+.postmetadata {padding:5px 75px 0px 20px; text-align:right; background: url(images/num-comm-right.jpg) 100% 5px no-repeat; margin-right:15px; clear:both;}
+* html .postmetadata {display:inline-block;}
+*:first-child+html .postmetadata {display:inline-block;}
+.postmetadata .comm-num-left {padding:5px 0px 7px 75px; float:right; background: url(images/num-comm-left.jpg) no-repeat;}
+
+.addcomment {position:absolute; right:28px; top:2px; font-size:10px; z-index:100;}
+.addcomment a {padding:0px 4px; line-height:100%; background-color:#8c7246; font-size:10px; color:#ffffff;}
+.addcomment a:hover {background-color:#1a0603; text-decoration:none;}
+.backtotop {position:relative; text-align:right; padding-right:10px; margin-top:-10px; z-index:100;}
+.backtotop a {padding:0px 4px 1px; line-height:100%; background-color:#8c7246; font-size:10px; color:#ffffff;}
+.backtotop a:hover {background-color:#1a0603; text-decoration:none;}
+
+.content h2.center {padding:25px 0; text-align:center;}
+.wp-pagenavi { left:10px; bottom:-22px; z-index:300; font-size:11px;}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active  {float:left; font-size:11px; background:#ca9417 url(images/page-num-bg.gif) 0 0 no-repeat !important; line-height:16px; padding:0 4px !important; color:#602600 !important; margin:0 3px 0 0 !important; border:none !important;}
+.wp-pagenavi a:hover {background:#602600 url(images/page-num-bg.gif) 0 0 no-repeat !important; font-size:11px; color:#ca9417 !important; text-decoration:none; border:none !important;}
+.wp-pagenavi span.pages {float:left; font-size:11px; padding: 0px 4px 0px 4px !important; line-height:16px; margin: 0px 3px 0px 0px !important; color: #ca9417 !important; border: none !important;	background:#602600 !important;}
+.wp-pagenavi span.current {float:left; font-size:11px; background:#602600 url(images/page-num-bg.gif) 0 0 no-repeat !important; line-height:16px; padding:0 4px !important; color:#ca9417 !important; margin:0 3px 0 0 !important; border:none !important;}
+.wp-pagenavi span.extend {float:left; font-size:11px; background:none !important; line-height:16px; padding:0 4px !important; color:#602600 !important; margin:0 3px 0 0 !important; border:none !important;}
+.wp-pagenavi2 {position:absolute; left:10px; bottom:-22px; z-index:300; font-size:11px;}
+.wp-pagenavi2 a, .wp-pagenavi2 a:link, .wp-pagenavi2 a:active  {float:left; font-size:11px; background:#ca9417 url(images/page-num-bg.gif) 0 0 no-repeat; line-height:16px; padding:0 4px; color:#602600; margin:0 3px 0 0; border:none;}
+.wp-pagenavi2 a:hover {background:#602600 url(images/page-num-bg.gif) 0 0 no-repeat; color:#ca9417; text-decoration:none;}
+
+#main ul {position:relative; list-style:none; padding:5px 20px;}
+#main ul li {display:block; padding:2px 0px 2px 12px;  background: url(images/marker.gif) 0px 7px no-repeat;}
+#main ol {padding: 5px 40px; list-style: decimal}
+#main ol li {padding:2px 0px 2px 0px;}
+
+
+#comments {}
+#comments a {}
+#comments h4 {padding-left:20px;}
+.nocomments {padding: 0 20px 30px 20px;}
+.message-bottom {position:relative; background: url(images/message-bottom.gif) left bottom repeat-x;}
+.message-top {position:relative; background: url(images/message-top.gif) 0 5px repeat-x;}
+.message-right {position:relative; background: url(images/message-right.gif) 100% 0px repeat-y;}
+.message-left {position:relative; background: url(images/message-left.gif) 0 0 repeat-y;}
+.mes-br {position:relative; background: url(images/message-br.jpg) right bottom no-repeat;}
+.mes-bl {position:relative; background: url(images/message-bl.jpg) left bottom no-repeat;}
+.mes-tr {position:relative; background: url(images/message-tr.jpg) right top no-repeat;}
+.mes-tl {position:relative; background: url(images/message-tl.jpg) left top no-repeat; width:100%;}
+.message-by {padding:15px 0 5px 0; font:16px/18px "Trebushet MS"; color:#602600; text-align:center;}
+.avatar-place {position:absolute; right:17px; top:17px; width:50px; height:50px;}
+.message-count {text-align:center;}
+.message-count span {display:inline-block; border:1px solid #8a5f3b; font:12px/14px Georgia; position:relative; padding:0 5px;}
+.message-count span b.count-l {position:absolute; left:-74px; top:1px; height:14px; width:72px; line-height:0px; font-size:0px; background: url(images/message-number-right.gif) left top no-repeat;}
+.message-count span b.count-r {position:absolute; right:-76px; top:1px; height:14px; width:74px; line-height:0px; font-size:0px; background: url(images/message-number-left.gif) right top no-repeat;}
+.message-entry {position:relative; padding:10px 20px 20px 20px;}
+.message-entry p {overflow:hidden;}
+* html .message-entry p {width:100%;}
+.message-time {font-size:11px; line-height:20px; color:#efe7c6; height:20px; width:250px; background: #b27110 url(images/message-time-right.gif) right top no-repeat; margin:10px 20px 0 10px;}
+.message-time span {display:block; height:20px; padding:0 25px; background: url(images/message-time-left.gif) left top no-repeat;}
+
+
+#response {position:relative;}
+#response h4 {padding:20px 0px 5px 20px;}
+#response div.form {width:100%; position:relative; border:1px solid #a4813c;}
+* html #response div.form {width:100%;}
+#response div.form #commentform {padding:10px;}
+
+.inputs {position:relative; width:49%; float:left;}
+.input {position:relative;}
+.input b {color:#c97e00;}
+.inputs input {position:relative; background:#ede5c3; border:1px solid #a4813c; width:99%; padding:2px; margin-bottom:5px;}
+.message {position:relative; width:49%; float:right; text-align:center;}
+.message .input {margin-bottom:0px; text-align:center;}
+.message textarea {background:#ede5c3; border:1px solid #a4813c; width:99%; height:92px; padding:1px;}
+.submit {text-align:right; margin-top:10px;}
+.submit input {border:none; padding:0;}
+* html .submit {margin-top:0px;}
+*:first-child+html .submit {margin-top:0px;}
+/* sidebars boxes*/
+.sb-bot {position:relative; background:url(images/sidebar-bottom.jpg) center bottom repeat-x; margin-top:15px;}
+.sb-top {position:relative; background:url(images/sidebar-top.jpg) center top repeat-x;}
+.sb-right {position:relative; background:url(images/sb-border.gif) right top repeat-y;}
+.sb-left {position:relative; background:url(images/sb-border.gif) left top repeat-y;}
+.sb-rb {position:relative; background:url(images/sidebar-rb.jpg) right bottom no-repeat;}
+.sb-lb {position:relative; background:url(images/sidebar-lb.jpg) left bottom no-repeat;}
+.sb-rt {position:relative; background:url(images/sidebar-rt.jpg) right top no-repeat; width:100%}
+.sb-lt {position:relative; background:url(images/sidebar-lt.jpg) left top no-repeat; padding:10px 10px 15px 10px; width:147px; overflow:hidden;}
+
+.sidebar{
+    margin-top:-15px;
+}
+.sidebar h2 {position:relative; font:bold 16px "Trebuchet MS"; color:#602600; margin:0 -6px; text-align:center; background:url(images/sidebar-title-line.jpg) center bottom no-repeat; padding:3px 0 18px 0;}
+.sidebar a {color:#602600;}
+.sidebar ul {position:relative; padding:3px 0 0px 0; list-style:none; background:none;}
+.sidebar ul li {display:block; position:relative; font-size: 12px; color:#240f02; padding:0px 0px;}
+* html .sidebar ul li {display:inline-block;}
+*:first-child+html .sidebar ul li {display:inline-block;}
+.sidebar ul li a {color:#602600; padding:2px 0px 2px 15px; display:block; background: url(images/sb-marker.gif) 3px 7px no-repeat;}
+.sidebar ul li.current-cat a {color:#240f02; background:#c18c35 url(images/sb-marker-hover.gif) 3px 7px no-repeat;}
+.sidebar ul li a:hover {color:#240f02; background:#c18c35 url(images/sb-marker-hover.gif) 3px 7px no-repeat; text-decoration:none;}
+.sidebar ul li p a {color:#602600; display:inline; background: none; padding:0px;}
+.sidebar ul li p a:hover {color:#602600; display:inline; background:#c18c35 none; padding:0px;}
+.sidebar ul li ul {padding:0px 0 0px 0px; list-style:none;}
+.sidebar ul li ul li a {padding:2px 0px 2px 25px; background: url(images/sb-marker.gif) 13px 7px no-repeat;}
+.sidebar ul li ul li a:hover {background:#c18c35 url(images/sb-marker-hover.gif) 13px 7px no-repeat;}
+
+.sidebar ul li.cat-item, #sidebars #archives ul li {padding:2px 0px 2px 15px; background: url(images/sb-marker.gif) 3px 7px no-repeat;}
+.sidebar ul li.cat-item a, #sidebars #archives ul li a {color:#602600; padding:0px; display:inline; background:none;}
+.sidebar ul li.cat-item.current-cat, #sidebars #archives ul li.current-cat {background:#c18c35 url(images/sb-marker-hover.gif) 3px 7px no-repeat;}
+.sidebar ul li.cat-item.current-cat a, #sidebars #archives ul li a {color:#240f02; background:none;}
+.sidebar ul li:hover.cat-item, #sidebars #archives ul li:hover, .selected {background:#c18c35 url(images/sb-marker-hover.gif) 3px 7px no-repeat !important;}
+.sidebar ul li.cat-item a:hover, #sidebars #archives ul li a:hover {color:#240f02; background:none; text-decoration:none;}
+
+.blogroll li a {
+    padding:0 !important;
+}
+
+/* Footer styles */
+#footer {
+    clear:both;
+    float:left;
+    width:100%;
+}
+#footer-content {
+    padding:10px;
+    margin:0 auto;
+    width:627px;
+    text-align:center;
+}
+
+#wp-calendar {width:100%; font-size:11px; font-family:Georgia; text-align:center;}
+#wp-calendar td {font-size:11px; text-align:center;}
+#wp-calendar td a {display:block; background:#ca9417 url(images/page-num-bg.gif) 0 0 no-repeat; color:#602600;}
+#wp-calendar td a:hover {display:block; background:#602600 url(images/page-num-bg.gif) 0 0 no-repeat; color:#ca9417; text-decoration:none;}
+#recentcomments li a {background:none !important; padding:0 0 0 0;}
+.textwidget iframe {position:relative; margin:0 -5px 10px -5px;}
+#recent_comments a {background-image:none !important; display:inline !important; padding:0 !important;}
+
+.logo-bottom {position:absolute; right:30px; bottom:15px; z-index:1000;}
+
+
+a:hover abbr {border:none;}
+
+.copy {position:relative; padding:25px 0px 15px 0px; font-size:11px; z-index:100; width:590px; text-align:right;}
+.valid {position:absolute; right:-200px; top:22px; font-size:11px; background:#ca9417 url(images/page-num-bg.gif) 0 0 no-repeat; line-height:22px; padding:0 7px;}
+
+.ping-track {position:relative; border:1px solid #a4813c; padding:10px;}
+
+
+.up {text-transform:uppercase;}
+.b {font-weight:bold;}
+.center {text-align:center;}
+.l, .left {float:left;}
+.r, .right {float:right;}
+.textleft {text-align:left !important;}
+.clear {clear:both;}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    display:table;
+    margin:10px auto;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 5px;
+    /* optional rounded corners for browsers that support it */
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+

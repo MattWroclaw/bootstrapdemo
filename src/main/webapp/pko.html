@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--    to jest link ze strony getbootsrap.com   css only-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>hello </title>
+</head>
+<body class="text-center" onload="czySaCiasteczka()">
+<div class="cover-container">
+<header class="masthead col-md-12">
+    <div class="inner">
+        <h3 class="masthead-brand">JavaGDA26</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="index.html">Strona główna</a>
+            <a class="nav-link" href="classes.html">Lista zajęć</a>
+            <a class="nav-link" href="contactForms.html">wypełnione formularze</a>
+            <a class="nav-link" href="mojeTest.html">Strona testowa</a>
+            <a class="nav-link" href="pko.html">strona ukryta</a>
+            <a class="nav-link" href="formularz.html">Formularz</a>
+
+        </nav>
+    </div>
+</header>
+<h3 onclick="this.innerHTML='Formularz danych'">Formularz</h3>
+<form class="form-div col-md-12" id="mojForm">
+
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            <label for="imjee">
+                Imię:
+            </label>
+        </div>
+        <div class="col-md-6">
+            <!--       form-control oznacza, że pochodzi z dancyh z formularza-->
+            <input id="imjee" type="text" placeholder="wpisz imie" class="form-control">
+        </div>
+    </div>
+
+    <div class="row col-md-12 ">
+        <div class="col-6">
+            <label for="lastname">
+                Nazwisko:
+            </label>
+        </div>
+        <div class="col-md-6">
+            <input id="lastname" placeholder="Kowalski..." type="text" class=" form-control">
+        </div>
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            email:
+        </div>
+        <div class="col-md-6">
+            <input type="email" placeholder="e-mail" class="form-control">
+        </div>
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            wiek:
+        </div>
+        <div class=" col-md-6">
+            <input type="number" placeholder="wiek" class="form-control">
+        </div>
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            Opis:
+        </div>
+        <textarea type="text" placeholder="napisz coś" class="form-control col-md-6">
+            </textarea>
+    </div>
+<!--    guziki-->
+    <div class=" row col-md-12">
+        <div class="col-md-4">
+            <input  type="reset" class="from-control col-md-6" onclick=
+                    "document.getElementById('place').innerHTML=Date()">
+        </div>
+        <div class="col-md-4">
+            <input type="submit" class="form-control col-md-6">
+        </div>
+        <div class="col-md-4">
+            <button onclick="mojaFunkcja()">mojaFunkcja</button>
+        </div>
+        <button type="button" onclick="document.getElementById('place').style.color=
+        'red'">zmienKolor</button>
+    </div>
+    <div class="row col-md-10">
+        <p id="place"><h1>BUM</h1></p>
+    </div>
+</form>
+
+    <style>
+        #container {
+            width: 800px;
+            height: 400px;
+            position: relative;
+            background: #ceff42;
+        }
+        #animate{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: bisque;
+        }
+    </style>
+
+    <p><button onclick="ruch()">animacja</button> </p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+
+<footer class="mastfoot mt-auto">
+    <div class="inner">
+        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
+                href="https://twitter.com/mdo">@mdo</a>.</p>
+    </div>
+</footer>
+
+</div>
+<!--te skrypty  muszą być na końcu, tuż przed zamknięciem body-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script>
+    function mojaFunkcja() {
+
+        var x = document.forms["mojForm"];
+        var text = "";
+        var i;
+        for(i=0; i<x.length; i++){
+            text += x.elements[i].value+"<br>";
+        }
+        document.getElementById("place").innerHTML=text;
+        document.getElementById("place").innerText=document.scripts.length+
+        "<br>"+document.head;
+
+    }
+</script>
+<script>
+    document.getElementById("mojForm").onsubmit = function (ev) {
+        ev.preventDefault();
+        console.log("klik");
+    }
+</script>
+<!--skrypt do animacji-->
+<script>
+    function ruch() {
+        var elem =document.getElementById("animate");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        function frame() {
+            if(pos==350){
+                clearInterval(id);
+                }else {
+                pos++;
+                elem.style.top = pos + "px";
+                elem.style.left = 2*pos + "px";
+            }
+        }
+    }
+</script>
+<script>
+    function czySaCiasteczka() {
+        var text = "";
+        if(navigator.cookieEnabled){
+            text = "Ciasteczka są zbierane";
+        }else {
+            text = "Nie zbieram ciasteczek";
+        }
+        alert(text);
+    }
+</script>
+</body>
+</html>

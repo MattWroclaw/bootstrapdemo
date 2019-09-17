@@ -18,6 +18,8 @@
                 <a class="nav-link" href="formularz.html">Formularz</a>
                 <a class="nav-link" href="contactForms.html">Wypelnione formularze</a>
                 <a class="nav-link" href="mojeTest.html">Strona testowa</a>
+                <a class="nav-link" href="pko.html">strona ukryta</a>
+
             </nav>
         </div>
     </header>
@@ -38,6 +40,7 @@
             <div class="col-2">Przyklad</div>
         </div>
     </main>
+    <p id="ciastko">X</p>
 
     <footer class="mastfoot">
         <div class="inner">
@@ -98,7 +101,8 @@
                     "<div class=\"col-2\">" + form1.email + "</div>" +
                     "<div class=\"col-2\">" + form1.description + "</div>" +
                     "</div>";
-
+                //to oznacza: find element by id, czyli w Java Script
+                //document.getElementById
                 $('#main-table').append(divElement);
             });
         }

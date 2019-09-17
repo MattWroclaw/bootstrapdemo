@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zabawa z JS</title>
+</head>
+<style>
+    #gornePole, #dolnePole{
+        background-color: #ceff42;
+        padding: 50px;
+    }
+    #gornyGuzik, #dolnyGuzik{
+        background-color: blanchedalmond;
+        font-size: 20px;
+        border: 2px solid;
+        padding: 20px;
+    }
+
+</style>
+<body>
+<h1>Java Script eventListener</h1>
+<h2>bubling nad capturing</h2>
+
+<div id="gornePole">
+    BUBLING
+    <p id="gornyGuzik">kliknij</p>
+</div>
+<br>
+<div id="dolnePole">
+    BUBLING
+    <p id="dolnyGuzik">kliknij</p>
+</div>
+
+
+<script>
+    document.getElementById("gornePole").addEventListener("click",function(){alert("na górnym polu")}, false);
+    document.getElementById("gornyGuzik").addEventListener("click", function () {
+        alert("na górnym guziku")
+    }, false);
+
+    document.getElementById("dolnePole").addEventListener("click", function () {
+        alert("na dolnym polu")
+    }, true);
+    document.getElementById("dolnyGuzik").addEventListener("click", function () {
+        alert("na dolnym guziku")
+    }, false)
+
+
+
+</script>
+</body>
+</html>

@@ -194,6 +194,17 @@ body {
 }
 
 .ogloszenie {
-    font-size: larger;
-    background: darkorange;
+    background: greenyellow;
+    text-decoration: #bababa;
+    padding-bottom: 10px;
+    text-decoration-color: whitesmoke;
+    background-color: #c494ff;
+}
+.ogloszenie:hover{
+    color: #c494ff;
+}
+
+.tloMenju{
+    background-color: cornflowerblue;
+    font-size: small;
 }
